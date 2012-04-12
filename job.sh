@@ -4,7 +4,7 @@ mkdir -p ../android
 cd ../android
 export WORKSPACE=$PWD
 
-if [ ! -d hudsonGummy_moto ]
+if [ ! -d hudsonGummy_Moto ]
 then
   git clone git://github.com/teamgummy/hudsonGummy_Moto.git
 fi
