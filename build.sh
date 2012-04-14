@@ -94,7 +94,7 @@ fi
 mka gummy 2>&1 | tee "$LUNCH".log
 
 ZIP=$(tail -2 "$LUNCH".log | cut -f3 -d ' ' | cut -f1 -d ' ' | sed -e '/^$/ d')
-scp out/target/product/$DEVICE/$ZIP website@exynos.co:/home/website/www/gummy.exynos.co/public_html/$DEVICE/$ZIP
+#scp out/target/product/$DEVICE/$ZIP website@exynos.co:/home/website/www/gummy.exynos.co/public_html/$DEVICE/$ZIP
 mkdir $WORKSPACE2/archive
 cp out/target/product/$DEVICE/$ZIP $WORKSPACE2/archive
 check_result Build failed.
