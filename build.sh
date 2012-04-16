@@ -75,6 +75,7 @@ echo Sync complete.
 
 cd vendor/Gummy
 ./get-prebuilts
+cd ../../
 
 if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
 then
