@@ -73,6 +73,9 @@ repo sync -d
 check_result repo sync failed.
 echo Sync complete.
 
+cd vendor/Gummy
+./get-prebuilts
+
 if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
 then
   $WORKSPACE/hudson/$REPO_BRANCH-setup.sh
