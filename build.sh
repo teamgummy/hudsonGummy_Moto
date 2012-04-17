@@ -68,6 +68,10 @@ fi
 
 #cp $WORKSPACE/hudson/$REPO_BRANCH.xml .repo/local_manifest.xml
 
+echo clean out old prebuilts
+rm proprietary/Term.apk
+rm proprietary/lib/armeabi/libjackpal-androidterm3.so
+
 echo Syncing...
 repo sync
 check_result repo sync failed.
