@@ -102,8 +102,6 @@ fi
 mka gummy 2>&1 | tee "$LUNCH".log
 
 ZIP=$(tail -2 "$LUNCH".log | cut -f3 -d ' ' | cut -f1 -d ' ' | sed -e '/^$/ d')
-echo "exynos.co,89.16.176.43 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7+fAVG49n/vQL9mYU6KcGdf0AAefhWcuq+RAbXLMNuz8ULwBrIsYvKpytswaWOg8ABoGN6iQQpvaV+YdYztnlESRHt0zmczmoZX2wcuB4rTJF+kTJ5MVzLhGnSS2Jg+qcfeMUVZqzbZtJspuZD3IMc9F88HqPsLXNrLoeeXn4CuXOLfrV5vnpwnhHKOI3lBrskVtT0ISEqlSdzNzgSb/cg/l7V2nvcYv21GAIzxT08PSSpqtjRWWdSDF9hTeJzhqRdcYhbk0dASleaJzBnq6EbGEVnZjEnwleEGRX5KyRrzUkaQg6K3+I5EjSWekSWJWdKYZTBzE9uW3XMgNLmcoh" >> ~/.ssh/known_hosts
-#scp out/target/product/$DEVICE/$ZIP website@exynos.co:/home/website/www/gummy.exynos.co/public_html/$DEVICE/$ZIP
 mkdir $WORKSPACE2/archive
 cp out/target/product/$DEVICE/$ZIP $WORKSPACE2/archive
 check_result Build failed.
