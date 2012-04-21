@@ -69,8 +69,8 @@ fi
 #cp $WORKSPACE/hudson/$REPO_BRANCH.xml .repo/local_manifest.xml
 
 echo clean out old prebuilts
-rm proprietary/Term.apk
-rm proprietary/lib/armeabi/libjackpal-androidterm3.so
+rm vendor/Gummy/proprietary/Term.apk
+rm vendor/Gummy/proprietary/lib/armeabi/libjackpal-androidterm3.so
 
 echo Syncing...
 repo sync
@@ -102,6 +102,7 @@ fi
 mka gummy 2>&1 | tee "$LUNCH".log
 
 ZIP=$(tail -2 "$LUNCH".log | cut -f3 -d ' ' | cut -f1 -d ' ' | sed -e '/^$/ d')
+rm -rf $WORKSPACE2/archive
 mkdir $WORKSPACE2/archive
 cp out/target/product/$DEVICE/$ZIP $WORKSPACE2/archive
 check_result Build failed.
